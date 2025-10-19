@@ -7,7 +7,7 @@ from curl import url
 
 class TestRegistrationWithNewCredentials:
 
-    def test_sucsess_registration(self, driver):
+    def test_success_registration(self, driver):
         #arrange
         driver.get(url.registration_site)
         name, email, password = generate_registration_data()
@@ -17,6 +17,6 @@ class TestRegistrationWithNewCredentials:
 
         #act
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(*Locators.SIGN_BUTTON))
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
         #assert
         assert driver.current_url == url.login_site

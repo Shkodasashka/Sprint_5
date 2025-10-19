@@ -3,7 +3,7 @@ from faker import Faker
 faker = Faker()
 
 def generate_registration_data():
-    name = faker.first_name(length=6)
+    name = faker.first_name()
     email = faker.email()
     password = faker.password(length=6, special_chars=True, digits=True, upper_case=True, lower_case=True)
     return name, email, password
