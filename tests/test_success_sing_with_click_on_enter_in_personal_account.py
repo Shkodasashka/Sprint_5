@@ -6,12 +6,12 @@ from locators import Locators
 from curl import url
 from data import Credentials
 
-class TestSignWithClickOnSignInPersonalAccount:
+class TestSignWithClickOnEnterInPersonalAccount:
 
-    def test_success_sing_click_on_sign_in_personal_account(self, driver):
+    def test_success_sign_click_on_enter_in_personal_account(self, driver):
 
         driver.get(url.main_site)
-        driver.find_element(*Locators.SIGN_IN_PERSONAL_ACCOUNT_BUTTON).click()
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
      
@@ -21,4 +21,7 @@ class TestSignWithClickOnSignInPersonalAccount:
 
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PLACE_AN_ORDER))
 
-        assert driver.current_url == url.sign_site
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PROFILE))
+
+        assert driver.current_url == url.profile_site

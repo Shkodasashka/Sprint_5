@@ -8,7 +8,7 @@ from data import Credentials
 
 class TestSignWithClickOnSignInForgotPasswordForm:
 
-    def test_success_sing_click_on_sign_sing_in_forgot_password_form(self, driver):
+    def test_success_sign_click_on_sign_sing_in_forgot_password_form(self, driver):
 
         driver.get(url.forgot_password_site)
         driver.find_element(*Locators.SIGN_IN_FORGOT_PASSWORD_BUTTON).click()

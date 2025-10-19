@@ -8,7 +8,7 @@ from data import Credentials
 
 class TestSignWithClickOnSignInAccount:
 
-    def test_success_sing_click_on_sign_in_account(self, driver):
+    def test_success_sign_click_on_sign_in_account(self, driver):
 
         driver.get(url.main_site)
         driver.find_element(*Locators.SIGN_IN_ACCOUNT_BUTTON).click()

@@ -6,12 +6,12 @@ from locators import Locators
 from curl import url
 from data import Credentials
 
-class TestSignWithClickOnSignInFormOfRegistration:
+class TestSignWithClickOnSignInPersonalAccount:
 
-    def test_success_sing_click_on_sign_sing_in_form_of_registration(self, driver):
+    def test_success_sign_click_on_sign_in_personal_account(self, driver):
 
-        driver.get(url.registration_site)
-        driver.find_element(*Locators.SIGN_IN_REGISTER_BUTTON).click()
+        driver.get(url.main_site)
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
      

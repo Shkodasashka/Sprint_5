@@ -15,6 +15,9 @@ class Locators:
     EMAIL_SIGN = (By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input")
     PASSWORD_SIGN = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")
     PLACE_AN_ORDER = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")
-    SIGN_IN_PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
+    PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
     SIGN_IN_REGISTER_BUTTON = (By.XPATH, "//a[contains(text(),'Войти')]")
     SIGN_IN_FORGOT_PASSWORD_BUTTON = (By.XPATH, "//a[contains(text(),'Войти')]")
+
+    # Локаторы для личного кабинета
+    PROFILE = (By.XPATH, "//a[contains(text(),'Профиль')]")
