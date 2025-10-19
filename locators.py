@@ -21,3 +21,6 @@ class Locators:
 
     # Локаторы для личного кабинета
     PROFILE = (By.XPATH, "//a[contains(text(),'Профиль')]")
+
+    #Локаторы для шапки страницы
+    CONSTRUCTOR_BUTTON = (By.XPATH, "//p[contains(text(),'Конструктор')]")
