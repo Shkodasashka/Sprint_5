@@ -17,3 +17,4 @@ class Locators:
     PLACE_AN_ORDER = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")
     SIGN_IN_PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
     SIGN_IN_REGISTER_BUTTON = (By.XPATH, "//a[contains(text(),'Войти')]")
+    SIGN_IN_FORGOT_PASSWORD_BUTTON = (By.XPATH, "//a[contains(text(),'Войти')]")
