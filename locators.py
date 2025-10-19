@@ -24,3 +24,4 @@ class Locators:
 
     #Локаторы для шапки страницы
     CONSTRUCTOR_BUTTON = (By.XPATH, "//p[contains(text(),'Конструктор')]")
+    LOGO_BUTTON = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']")
