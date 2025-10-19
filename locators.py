@@ -16,3 +16,4 @@ class Locators:
     PASSWORD_SIGN = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")
     PLACE_AN_ORDER = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")
     SIGN_IN_PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
+    SIGN_IN_REGISTER_BUTTON = (By.XPATH, "//a[contains(text(),'Войти')]")
