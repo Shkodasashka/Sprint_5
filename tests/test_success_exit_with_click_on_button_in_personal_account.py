@@ -6,9 +6,9 @@ from locators import Locators
 from curl import url
 from data import Credentials
 
-class TestSignWithClickOnSwitchOnLogoStellarBurgers:
+class TestSuccessExitWithClickOnButtonInPersonalAccount:
 
-    def test_success_sign_click_on_switch_on_logo_stellar_burgers(self, driver):
+    def test_success_exit_with_click_on_button_in_personal_account(self, driver):
 
         driver.get(url.main_site)
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
@@ -24,8 +24,8 @@ class TestSignWithClickOnSwitchOnLogoStellarBurgers:
         driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PROFILE))
      
-        driver.find_element(*Locators.LOGO).click()
+        driver.find_element(*Locators.EXIT_BUTTON).click()
 
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PLACE_AN_ORDER))
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
 
-        assert driver.current_url == url.sign_site
+        assert driver.current_url == url.login_site
