@@ -1,7 +1,7 @@
 class url():
-    main_site = 'https://stellarburgers.education-services.ru'
-    registration_site = f'{main_site}/register'
-    login_site = f'{main_site}/login'
-    sign_site = 'https://stellarburgers.education-services.ru/'
-    forgot_password_site = 'https://stellarburgers.education-services.ru/forgot-password'
-    profile_site = 'https://stellarburgers.education-services.ru/account/profile'
+    main_site = 'https://stellarburgers.education-services.ru'  #главная страница для неавторизованного пользователя
+    registration_site = f'{main_site}/register' #страница регистрации нового пользователя
+    login_site = f'{main_site}/login' #страница входа заргестрированного пользователя
+    sign_site = f'{main_site}/' #главная страница для авторизованного пользователя
+    forgot_password_site = f'{main_site}/forgot-password' #страница восстановления пароля
+    profile_site = f'{main_site}/account/profile' #страница профиля авторизованного пользователя

@@ -6,12 +6,12 @@ from locators import Locators
 from curl import url
 from data import Credentials
 
-class TestSignWithClickOnSignInForgotPasswordForm:
+class TestLogoutOfAccount:
 
-    def test_success_sign_click_on_sign_sing_in_forgot_password_form(self, driver):
+    def test_success_exit_with_click_on_button_in_personal_account(self, driver):
 
-        driver.get(url.forgot_password_site)
-        driver.find_element(*Locators.SIGN_IN_FORGOT_PASSWORD_BUTTON).click()
+        driver.get(url.main_site)
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
         
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
      
@@ -21,4 +21,11 @@ class TestSignWithClickOnSignInForgotPasswordForm:
 
         WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PLACE_AN_ORDER))
 
-        assert driver.current_url == url.sign_site
+        driver.find_element(*Locators.PERSONAL_ACCOUNT_BUTTON).click()
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.PROFILE))
+     
+        driver.find_element(*Locators.EXIT_BUTTON).click()
+
+        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
+
+        assert driver.current_url == url.login_site
