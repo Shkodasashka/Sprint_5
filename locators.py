@@ -20,6 +20,13 @@ class Locators:
     PLACE_AN_ORDER = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")
     PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")
     SIGN_IN_ACCOUNT_BUTTON = (By.XPATH, "//button[contains(text(),'Войти в аккаунт')]")
+    BREAD_SWITCHER = (By.XPATH, "//span[contains(text(),'Булки')]")
+    SELECTED_BREAD_SWITCHER = (By.XPATH, "//span[contains(text(),'Булки')]/parent::div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']")
+    SAUCE_SWITCHER = (By.XPATH, "//span[contains(text(),'Соусы')]")
+    SELECTED_SAUCE_SWITCHER = (By.XPATH, "//span[contains(text(),'Соусы')]/parent::div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']")
+    STAFFING_SWITCHER = (By.XPATH, "//span[contains(text(),'Начинки')]")
+    SELECTED_STAFFING_SWITCHER = (By.XPATH, "//span[contains(text(),'Начинки')]/parent::div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']")
+
 
     # Локаторы на странице личного кабинета
     PROFILE = (By.XPATH, "//a[contains(text(),'Профиль')]")

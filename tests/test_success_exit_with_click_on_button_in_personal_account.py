@@ -6,7 +6,7 @@ from locators import Locators
 from curl import url
 from data import Credentials
 
-class TestSuccessExitWithClickOnButtonInPersonalAccount:
+class TestExitWithClickOnButtonInPersonalAccount:
 
     def test_success_exit_with_click_on_button_in_personal_account(self, driver):
 
