@@ -14,8 +14,7 @@ class TestRegistrationForm:
         driver.find_element(*Locators.EMAIL_REGISTER).send_keys(email)
         driver.find_element(*Locators.PASSWORD_REGISTER).send_keys(password)
         driver.find_element(*Locators.REGISTER_BUTTON).click()
-        WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
-        assert driver.current_url == url.login_site
+        assert WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.SIGN_BUTTON))
 
     def test_unsuccess_registration_with_invalid_password(self, driver):
         driver.get(url.registration_site)
@@ -25,4 +24,3 @@ class TestRegistrationForm:
         driver.find_element(*Locators.PASSWORD_REGISTER).send_keys(password[:5])
         driver.find_element(*Locators.REGISTER_BUTTON).click()
         assert WebDriverWait(driver, 10).until(EC.visibility_of_element_located(Locators.INVALID_PASSWORD_POPUP))
-

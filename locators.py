@@ -15,7 +15,6 @@ class Locators:
     EMAIL_SIGN = (By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input")  #поле ввода почты
     PASSWORD_SIGN = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")  #поле ввода пароля
 
-
     # Локаторы на главной странице
     PLACE_AN_ORDER = (By.XPATH, "//button[contains(text(),'Оформить заказ')]")  #кнопка "Оформить заказ" для авторизованного пользователя
     PERSONAL_ACCOUNT_BUTTON = (By.XPATH, "//p[contains(text(),'Личный Кабинет')]")  #кнопка "Личный кабинет"
@@ -26,7 +25,6 @@ class Locators:
     SELECTED_SAUCE_SWITCHER = (By.XPATH, "//span[contains(text(),'Соусы')]/parent::div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']")  #выбранный тогл "Соусы" в конструкторе
     STAFFING_SWITCHER = (By.XPATH, "//span[contains(text(),'Начинки')]") #тогл "Начинки" в конструкторе
     SELECTED_STAFFING_SWITCHER = (By.XPATH, "//span[contains(text(),'Начинки')]/parent::div[@class='tab_tab__1SPyG tab_tab_type_current__2BEPc pt-4 pr-10 pb-4 pl-10 noselect']") #выбранный тогл "Начинки" в конструкторе
-
 
     # Локаторы на странице личного кабинета
     PROFILE = (By.XPATH, "//a[contains(text(),'Профиль')]") #кнопка "Профиль"
